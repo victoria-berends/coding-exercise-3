@@ -11,8 +11,10 @@ function start(){
         e.preventDefault();
         $("#menu a.active").removeClass("active");
         $(this).addClass("active");
-        
+
         var href = $(this).attr("href");
-        $("#content").load("about.html");   }
+        $("#content").load(href);   
+    }
 
     $(document).on("click","#menu a", loadpage);
+    
